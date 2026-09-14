@@ -136,7 +136,7 @@ The columns of $T_1$ form an orthonormal basis for the active control subspace
 $$
 \mathcal S_a(x)
 =
-\operatorname{span}(T_1(x;\theta)).
+\mathrm{span}(T_1(x;\theta)).
 $$
 
 Computationally,
@@ -468,13 +468,13 @@ $$
 \Pi_{T_1}(G)
 =
 G-
-T_1\operatorname{sym}(T_1^\top G),
+T_1\,\mathrm{sym}(T_1^\top G),
 $$
 
 where
 
 $$
-\operatorname{sym}(A)
+\mathrm{sym}(A)
 =
 \frac{1}{2}(A+A^\top).
 $$
