@@ -545,10 +545,7 @@ This repository is intended to investigate several questions:
 2. How small can $n_v$ become while retaining performance close to full-dimensional NMPC?
 
 3. Can reinforcement learning learn a smooth mapping
-
-   $$
-   x\mapsto\mathcal S_a(x)
-   $$
+$$ x\mapsto\mathcal S_a(x) $$
 
    over the relevant state space?
 
