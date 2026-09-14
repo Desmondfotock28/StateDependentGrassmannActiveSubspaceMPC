@@ -187,13 +187,7 @@ This representation is invariant to rotations of the basis.
 
 The proposed architecture learns
 
-$$
-\boxed{
-x
-\longmapsto
-\mathcal S_a(x).
-}
-$$
+The following macros are not allowed: operatorname
 
 A neural network parameterized by $\theta$ first produces an unconstrained matrix
 
@@ -204,9 +198,7 @@ $$
 An orthonormalization or manifold mapping is then used to obtain
 
 $$
-T_1(x;\theta)
-=
-\mathcal O(A_\theta(x)),
+T_1(x;\theta) = \mathcal O(A_\theta(x)),
 $$
 
 such that
@@ -247,12 +239,7 @@ $$
 Instead of optimizing the full control sequence $U$, NMPC solves
 
 $$
-\boxed{
-v_k^\star
-=
-\arg\min_{v\in\mathbb R^{n_v}}
-J_N(x_k,T_{1,k}v)
-}
+\boxed{v_k^\star = \arg\min_{v\in\mathbb R^{n_v}} J_N(x_k,T_{1,k}v)}
 $$
 
 subject to the original system dynamics and constraints.
@@ -323,8 +310,7 @@ $$
 The learning problem can be interpreted as
 
 $$
-\boxed{
-\text{learn which control subspace NMPC should search from each state.}
+\boxed{\text{learn which control subspace NMPC should search from each state.}
 }
 $$
 
@@ -373,16 +359,7 @@ $$
 that maximizes expected closed-loop performance:
 
 $$
-\boxed{
-\theta^\star
-=
-\arg\max_\theta
-\mathbb E
-\left[
-\sum_{k=0}^{\infty}
-\gamma^k r_k
-\right].
-}
+\boxed{ \theta^\star = \arg\max_\theta \mathbb E \left[ \sum_{k=0}^{\infty} \gamma^k r_k \right].}
 $$
 
 ---
@@ -400,9 +377,7 @@ $$
 Here, the actor learns
 
 $$
-\boxed{
-x\longmapsto\mathcal S_a(x).
-}
+\boxed{ x\longmapsto\mathcal S_a(x).}
 $$
 
 The actual control is subsequently obtained from model-based optimization:
@@ -457,18 +432,13 @@ $$
 a tangent-space projection can be constructed as
 
 $$
-\Pi_{T_1}(G)
-=
-G-
-T_1\,\mathrm{sym}(T_1^\top G),
+\Pi_{T_1}(G) = G-T_1\,\mathrm{sym}(T_1^\top G),
 $$
 
 where
 
 $$
-\mathrm{sym}(A)
-=
-\frac{1}{2}(A+A^\top).
+\mathrm{sym}(A) = \frac{1}{2}(A+A^\top).
 $$
 
 The resulting direction belongs to the tangent space of the Stiefel manifold.
@@ -505,11 +475,7 @@ provides such a representation.
 For example, changes between consecutive state-dependent subspaces can be measured using
 
 $$
-d_k
-=
-\left\|
-P_a(x_{k+1})-P_a(x_k)
-\right\|_F.
+d_k = \left\| P_a(x_{k+1})-P_a(x_k) \right\|_F.
 $$
 
 This avoids interpreting simple rotations of an equivalent basis as changes in the actual control subspace.
@@ -517,11 +483,7 @@ This avoids interpreting simple rotations of an equivalent basis as changes in t
 A smoothness regularizer may therefore be considered:
 
 $$
-L_{\mathrm{smooth}}
-=
-\left\|
-P_a(x_{k+1})-P_a(x_k)
-\right\|_F^2.
+L_{\mathrm{smooth}} = \left\| P_a(x_{k+1})-P_a(x_k) \right\|_F^2.
 $$
 
 ---
@@ -547,13 +509,7 @@ $$
 At a high level, the sensitivity with respect to the neural-network parameters follows
 
 $$
-\nabla_\theta J
-=
-\left(
-\frac{\partial T_1(x;\theta)}
-{\partial\theta}
-\right)^*
-\nabla_{T_1}J.
+\nabla_\theta J = \left( \frac{\partial T_1(x;\theta)} {\partial\theta} \right)^* \nabla_{T_1}J.
 $$
 
 For
@@ -571,9 +527,7 @@ $$
 Consequently, for a differentiable objective,
 
 $$
-\nabla_{T_1}J
-=
-\nabla_UJ\,v^\top,
+\nabla_{T_1}J = \nabla_UJ\,v^\top,
 $$
 
 subject to the appropriate treatment of the constrained NMPC solution and its Lagrangian sensitivities.
@@ -744,29 +698,17 @@ Experimental results will be added as the implementation progresses.
 The project can be summarized by three equations:
 
 $$
-\boxed{
-x
-\longmapsto
-T_1(x;\theta),
-\qquad
-T_1^\top T_1=I
+\boxed{ x \longmapsto T_1(x;\theta), \qquad T_1^\top T_1=I
 }
 $$
 
 $$
-\boxed{
-v^\star
-=
-\arg\min_v
-J_N(x,T_1(x;\theta)v)
+\boxed{ v^\star = \arg\min_v J_N(x,T_1(x;\theta)v)
 }
 $$
 
 $$
-\boxed{
-U^\star
-=
-T_1(x;\theta)v^\star.
+\boxed{ U^\star = T_1(x;\theta)v^\star.
 }
 $$
 
