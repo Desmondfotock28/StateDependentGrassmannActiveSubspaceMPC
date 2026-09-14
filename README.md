@@ -116,9 +116,7 @@ The resulting controller learns a mapping from the system state to an appropriat
 Let
 
 $$
-T_1(x;\theta)
-\in
-\mathbb R^{N_u\times n_v}
+T_1(x;\theta) \in \mathbb R^{N_u\times n_v}
 $$
 
 satisfy
