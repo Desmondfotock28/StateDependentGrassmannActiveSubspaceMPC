@@ -475,11 +475,7 @@ provides such a representation.
 For example, changes between consecutive state-dependent subspaces can be measured using
 
 $$
-d_k
-=
-\left\|
-P_a(x_{k+1})-P_a(x_k)
-\right\|_F.
+d_k = \left\| P_a(x_{k+1})-P_a(x_k) \right\|_F.
 $$
 
 This avoids interpreting simple rotations of an equivalent basis as changes in the actual control subspace.
