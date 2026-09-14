@@ -11,9 +11,7 @@ This project investigates a different approach to reducing the NMPC optimization
 Instead of optimizing the complete open-loop control sequence
 
 $$
-U \in \mathbb{R}^{N_u},
-\qquad
-N_u = N n_u,
+U^\star(x) = \arg\min_U J_N(x,U)
 $$
 
 we optimize only within a low-dimensional, **state-dependent control subspace**.
@@ -55,9 +53,7 @@ Instead,
 Consider the nominal NMPC problem
 
 $$
-U^\star(x)
-=
-\arg\min_U J_N(x,U)
+U^\star(x) = \arg\min_U J_N(x,U)
 $$
 
 subject to the nonlinear system dynamics
@@ -120,9 +116,7 @@ The resulting controller learns a mapping from the system state to an appropriat
 Let
 
 $$
-T_1(x;\theta)
-\in
-\mathbb R^{N_u\times n_v}
+T_1(x;\theta) \in \mathbb R^{N_u\times n_v}
 $$
 
 satisfy
@@ -134,9 +128,7 @@ $$
 The columns of $T_1$ form an orthonormal basis for the active control subspace
 
 $$
-\mathcal S_a(x)
-=
-\mathrm{span}(T_1(x;\theta)).
+\mathcal{S}_a(x) = \mathrm{span}(T_1(x;\theta)).
 $$
 
 Computationally,
