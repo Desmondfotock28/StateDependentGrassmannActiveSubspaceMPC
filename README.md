@@ -53,9 +53,7 @@ Instead,
 Consider the nominal NMPC problem
 
 $$
-U^\star(x)
-=
-\arg\min_U J_N(x,U)
+U^\star(x) = \arg\min_U J_N(x,U)
 $$
 
 subject to the nonlinear system dynamics
