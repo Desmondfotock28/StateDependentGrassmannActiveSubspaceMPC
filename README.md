@@ -187,13 +187,7 @@ This representation is invariant to rotations of the basis.
 
 The proposed architecture learns
 
-$$
-\boxed{
-x
-\longmapsto
-\mathcal S_a(x).
-}
-$$
+The following macros are not allowed: operatorname
 
 A neural network parameterized by $\theta$ first produces an unconstrained matrix
 
@@ -204,9 +198,7 @@ $$
 An orthonormalization or manifold mapping is then used to obtain
 
 $$
-T_1(x;\theta)
-=
-\mathcal O(A_\theta(x)),
+T_1(x;\theta) = \mathcal O(A_\theta(x)),
 $$
 
 such that
