@@ -708,21 +708,12 @@ Experimental results will be added as the implementation progresses.
 The project can be summarized by three equations:
 
 $$
-\boxed{
-x
-\longmapsto
-T_1(x;\theta),
-\qquad
-T_1^\top T_1=I
+\boxed{ x \longmapsto T_1(x;\theta), \qquad T_1^\top T_1=I
 }
 $$
 
 $$
-\boxed{
-v^\star
-=
-\arg\min_v
-J_N(x,T_1(x;\theta)v)
+\boxed{ v^\star = \arg\min_v J_N(x,T_1(x;\theta)v)
 }
 $$
 
