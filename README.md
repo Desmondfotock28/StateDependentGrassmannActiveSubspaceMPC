@@ -128,7 +128,7 @@ $$
 The columns of $T_1$ form an orthonormal basis for the active control subspace
 
 $$
-\mathcal S_a(x) = \operatorname{span}(T_1(x;\theta)).
+\mathcal S_a(x) = \operator name{span}(T_1(x;\theta)).
 $$
 
 Computationally,
