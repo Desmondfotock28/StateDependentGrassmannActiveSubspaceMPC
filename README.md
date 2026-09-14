@@ -11,9 +11,7 @@ This project investigates a different approach to reducing the NMPC optimization
 Instead of optimizing the complete open-loop control sequence
 
 $$
-U \in \mathbb{R}^{N_u},
-\qquad
-N_u = N n_u,
+U^\star(x) = \arg\min_U J_N(x,U)
 $$
 
 we optimize only within a low-dimensional, **state-dependent control subspace**.
