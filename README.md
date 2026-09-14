@@ -239,12 +239,7 @@ $$
 Instead of optimizing the full control sequence $U$, NMPC solves
 
 $$
-\boxed{
-v_k^\star
-=
-\arg\min_{v\in\mathbb R^{n_v}}
-J_N(x_k,T_{1,k}v)
-}
+\boxed{v_k^\star = \arg\min_{v\in\mathbb R^{n_v}} J_N(x_k,T_{1,k}v)}
 $$
 
 subject to the original system dynamics and constraints.
